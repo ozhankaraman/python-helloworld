@@ -5,7 +5,7 @@ More Python Flask information please visit: http://flask.pocoo.org
 - - -
 
 Building Container Under Docker:
-1) Clone Repo
+1) Clone Git Repo
 ```
 git clone https://github.com/zebrastack/python-helloworld.git
 ```
