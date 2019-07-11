@@ -1,4 +1,4 @@
-Simple Python Http Docker Container for testing purposes
+Simple Python Flask Http Docker Container for testing purposes
 
 More Python Flask information please visit: http://flask.pocoo.org
 
