@@ -7,7 +7,7 @@ More Python Flask information please visit: http://flask.pocoo.org
 Building Container Under Docker:
 1) Clone Git Repo
 ```
-git clone https://github.com/zebrastack/python-helloworld.git
+git clone https://github.com/ozhankaraman/python-helloworld.git
 ```
 
 2) Install Docker over Ubuntu 1604/1804
@@ -54,4 +54,6 @@ docker run --rm -it -p 8000:8000 ozhank/python-helloworld:latest
 6) Open a new terminal connection to server and test connection or you could test it over your browser
 ```
 curl http://localhost:8000
+curl http://localhost:8000/africa
+curl http://localhost:8000/healtz
 ````
