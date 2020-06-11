@@ -48,13 +48,13 @@ docker run hello-world
 
 5) Start Docker Container
 ```
-docker run --rm -it -p 8000:8000 ozhank/python-helloworld:latest
+docker run --rm -it -p 8080:8080 ozhank/python-helloworld:latest
 ```
 
 6) Open a new terminal connection to server and test connection or you could test it over your browser
 ```
-curl http://localhost:8000
-curl http://localhost:8000/africa
-curl http://localhost:8000/healtz
-curl http://localhost:8000/error
+curl http://localhost:8080
+curl http://localhost:8080/africa
+curl http://localhost:8080/healtz
+curl http://localhost:8080/error
 ````
