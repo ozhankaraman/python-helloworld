@@ -56,4 +56,5 @@ docker run --rm -it -p 8000:8000 ozhank/python-helloworld:latest
 curl http://localhost:8000
 curl http://localhost:8000/africa
 curl http://localhost:8000/healtz
+curl http://localhost:8000/error
 ````
