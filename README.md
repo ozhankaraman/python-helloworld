@@ -36,13 +36,13 @@ docker run hello-world
 
 4.2) Automatic Push to Docker Hub using build.sh
 ```
-# This will push the image to docker hub with an example tag like: ozhank/python-helloworld:dev-n5sdeeai
+# ozhank/python-helloworld:dev-n5sdeeai
 > ./build -b dev
-# This will push the image to docker hub with an example tag like: ozhank/python-helloworld:prod-punwlj53
+# ozhank/python-helloworld:prod-punwlj53
 > ./build -b prod
-# This will push the image to docker hub with an example tag like: ozhank/python-helloworld:staging-jndipvbf
+# ozhank/python-helloworld:staging-jndipvbf
 > ./build -b staging
-# This will push the image to docker hub with an example tag like: ozhank/python-helloworld:2.3.3
+# ozhank/python-helloworld:2.3.3
 > ./build -v 2.3.3
 ```
 
