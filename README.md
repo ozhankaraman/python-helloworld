@@ -27,6 +27,7 @@ docker run hello-world
 ```
 
 4) Push Docker Image to Docker.hub
+
 4.1) Manual Push to Docker Hub
 ```
 > docker login
