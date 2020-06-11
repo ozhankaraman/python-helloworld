@@ -1,4 +1,4 @@
-Simple Python Flask Http Docker Container for testing purposes
+Simple Python Flask Http Docker Container for Branch and Canary testing purposes
 
 More Python Flask information please visit: http://flask.pocoo.org
 
@@ -26,12 +26,32 @@ docker run hello-world
 > docker build -t python-helloworld .
 ```
 
-4) Start Docker Container
+4) Push Docker Image to Docker.hub
+4.1) Manual Push to Docker Hub
 ```
-docker run --rm -it -p 8000:8000 python-helloworld:latest
+> docker login
+> docker tag python-helloworld ozhank/python-helloworld
+> docker push ozhank/python-helloworld
 ```
 
-5) Open a new terminal connection to server and test connection or you could test it over your browser
+4.2) Automatic Push to Docker Hub using build.sh
+```
+# This will push the image to docker hub with an example tag like: ozhank/python-helloworld:dev-n5sdeeai
+> ./build -b dev
+# This will push the image to docker hub with an example tag like: ozhank/python-helloworld:prod-punwlj53
+> ./build -b prod
+# This will push the image to docker hub with an example tag like: ozhank/python-helloworld:staging-jndipvbf
+> ./build -b staging
+# This will push the image to docker hub with an example tag like: ozhank/python-helloworld:2.3.3
+> ./build -v 2.3.3
+```
+
+5) Start Docker Container
+```
+docker run --rm -it -p 8000:8000 ozhank/python-helloworld:latest
+```
+
+6) Open a new terminal connection to server and test connection or you could test it over your browser
 ```
 curl http://localhost:8000
 ````
