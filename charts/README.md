@@ -1,1 +1,1 @@
-# golang application
+# python-helloworld application
