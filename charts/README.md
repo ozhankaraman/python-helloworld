@@ -1,1 +1,1 @@
-# python-helloworld application
+# python-helloworld application helm charts
