@@ -1,4 +1,4 @@
-Simple Python Flask Http Docker Container for Branch and Canary testing purposes
+Simple Python Flask Http Docker Container for Git Branch and Canary testing purposes
 
 More Python Flask information please visit: http://flask.pocoo.org
 
