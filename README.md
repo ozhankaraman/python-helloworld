@@ -38,13 +38,13 @@ docker run hello-world
 4.2) Automatic Push to Docker Hub using build.sh
 ```
 # ozhank/python-helloworld:dev-n5sdeeai
-> ./build -b dev
+> ./build.sh -b dev
 # ozhank/python-helloworld:prod-punwlj53
-> ./build -b prod
+> ./build.sh -b prod
 # ozhank/python-helloworld:staging-jndipvbf
-> ./build -b staging
+> ./build.sh -b staging
 # ozhank/python-helloworld:2.3.3
-> ./build -v 2.3.3
+> ./build.sh -v 2.3.3
 ```
 
 5) Start Docker Container
