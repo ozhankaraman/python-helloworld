@@ -4,7 +4,7 @@ import os
 
 PORT = 8080
 #MESSAGE = "Hello World\n" + "BRANCH:" + os.environ['BRANCH'] + "\nVERSION:" + os.environ['VERSION'] + "\nGITCOMMIT:" + os.environ['GITCOMMIT'] + "\n"
-MESSAGE = "Hello World\n<br>" + "BRANCH " + os.environ['BRANCH'] + "\n<br>VERSION " + os.environ['VERSION'] + "\n<br>GITCOMMIT " + os.environ['GITCOMMIT'] + "\n<br>TAG " + os.environ['TAG'] + "\n<br>"
+MESSAGE = "Hello World\n<br><br>" + "BRANCH " + os.environ['BRANCH'] + "\n<br>VERSION " + os.environ['VERSION'] + "\n<br>GITCOMMIT " + os.environ['GITCOMMIT'] + "\n<br>TAG " + os.environ['TAG'] + "\n<br>"
 MESSAGE2 = "Hello Africa\n"
 
 #print(sys.argv)
