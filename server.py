@@ -4,22 +4,35 @@ import os
 
 PORT = 8080
 #MESSAGE = "Hello World\n" + "BRANCH:" + os.environ['BRANCH'] + "\nVERSION:" + os.environ['VERSION'] + "\nGITCOMMIT:" + os.environ['GITCOMMIT'] + "\n"
-MESSAGE = "Hello World\n<br><br>" + "BRANCH " + os.environ['BRANCH'] + "\n<br>VERSION " + os.environ['VERSION'] + "\n<br>GITCOMMIT " + os.environ['GITCOMMIT'] + "\n<br>TAG " + os.environ['TAG'] + "\n<br>"
-MESSAGE2 = "Hello Africa\n"
-
-#print(sys.argv)
-#for param in os.environ.keys():
-#    print ("%20s %s" % (param,os.environ[param]))
+MESSAGE = "Hello World\n<br><br>" + "BRANCH " + os.environ['BRANCH'] + "\n<br>VERSION " + os.environ['VERSION'] + "\n<br>GITCOMMIT " + os.environ['GITCOMMIT'] + "\n<br>TAG " + os.environ['TAG'] + "\n<br>ERROR " + os.environ['ERROR'] + "\n<br>"
+MESSAGE_MARS = "Hello Mars\n"
 
 app = Flask(__name__)
 
+counter = 0
 @app.route("/")
 def hello_world():
-    return MESSAGE.encode("utf-8")
+    global counter
+    global MESSAGE
+    counter += 1
 
-@app.route("/africa")
-def hello_africa():
+#    if os.environ['VERSION'] == "3.2.22":
+    if os.environ['ERROR'] == "yes":
+        if (counter % 10) > 5:
+            abort(500)
+
+    MESSAGE2 = MESSAGE + " " + str(counter) + "\n<br>"
     return MESSAGE2.encode("utf-8")
+        
+    # if divmod(int(time.time()), 10)[1] <= 3:
+    #     abort(500)
+    # else:
+    #     return MESSAGE.encode("utf-8")
+    # return MESSAGE.encode("utf-8")
+
+@app.route("/mars")
+def hello_mars():
+    return MESSAGE_MARS.encode("utf-8")
 
 @app.route("/healtz")
 def healtz():
