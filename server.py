@@ -4,7 +4,7 @@ import os
 
 PORT = 8080
 #MESSAGE = "Hello World\n" + "BRANCH:" + os.environ['BRANCH'] + "\nVERSION:" + os.environ['VERSION'] + "\nGITCOMMIT:" + os.environ['GITCOMMIT'] + "\n"
-MESSAGE = "Hello World\n<br><br>" + "BRANCH " + os.environ['BRANCH'] + "\n<br>VERSION " + os.environ['VERSION'] + "\n<br>GITCOMMIT " + os.environ['GITCOMMIT'] + "\n<br>TAG " + os.environ['TAG'] + "\n<br>ERROR " + os.environ['ERROR'] + "\n<br>"
+MESSAGE = "Hello World\n<br><br>" + "BRANCH: " + os.environ['BRANCH'] + "\n<br>VERSION: " + os.environ['VERSION'] + "\n<br>GITCOMMIT: " + os.environ['GITCOMMIT'] + "\n<br>TAG: " + os.environ['TAG'] + "\n<br>ERROR_ENABLED: " + os.environ['ERROR'] + "\n<br>" + "\nHOSTNAME: " + os.environ['HOSTNAME'] + "\n<br>"
 MESSAGE_MARS = "Hello Mars\n"
 
 app = Flask(__name__)
@@ -21,7 +21,7 @@ def hello_world():
         if (counter % 10) > 5:
             abort(500)
 
-    MESSAGE2 = MESSAGE + " " + str(counter) + "\n<br>"
+    MESSAGE2 = MESSAGE + "COUNTER: " + str(counter) + "\n<br>"
     return MESSAGE2.encode("utf-8")
         
     # if divmod(int(time.time()), 10)[1] <= 3:
