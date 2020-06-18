@@ -35,11 +35,11 @@ jobs:
     - name: Publish to Docker Registry
       uses: elgohr/Publish-Docker-Github-Action@master
       env:
-        VERSION: 1.2.3
+        VERSION: 1.2.5
         ERROR: no
       with:
-        name: ozhank/repository
+        name: ozhank/python-helloworld
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
         buildargs: VERSION,ERROR
-        tags: "latest,1.2.3"
+        tags: "latest,1.2.5"
