@@ -1,6 +1,6 @@
 #!/bin/sh
 
-repository="ozhank/python-helloworld"
+repository="ozhankaraman/python-helloworld"
 branch="master"
 commit=$(cat /dev/urandom | env LC_CTYPE=C tr -dc 'a-zA-Z0-9' | fold -w 8 | head -n 1 | awk '{print tolower($0)}')
 if test `echo $@ | grep -c '\-e'` -gt 0; then
@@ -38,5 +38,5 @@ docker push ${image}
 
 #docker build -t python-helloworld --build-arg BRANCH=${branch} --build-arg GITCOMMIT=${commit} --build-arg VERSION=${version} .
 
-#docker tag python-helloworld ozhank/python-helloworld
-#docker push ozhank/python-helloworld:latest
+#docker tag python-helloworld ozhankaraman/python-helloworld
+#docker push ozhankaraman/python-helloworld:latest
