@@ -1,0 +1,18 @@
+image:
+  tag: 4.3.6
+hpa:
+  enabled: true
+  minReplicas: 3
+  maxReplicas: 30
+canary:
+  enabled: true
+ingress:
+  enabled: true
+  path: /
+  hosts:
+  - python-helloworld-prod.k.zebrastack.com
+  tls:
+    credentialName: ingress-cert-k0
+    mode: SIMPLE
+    privateKey: sds
+    serverCertificate: sds

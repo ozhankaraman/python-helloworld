@@ -1,0 +1,16 @@
+image:
+  tag: dev-ghac7tgw
+replicaCount: 1
+hpa:
+  enabled: false
+ingress:
+  enabled: true
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+  path: /
+  hosts:
+  - python-helloworld-dev.k.zebrastack.com
+  tls:
+  - hosts:
+    - python-helloworld-dev.k.zebrastack.com
+    secretName: ingress-cert-k0
