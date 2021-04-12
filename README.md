@@ -33,6 +33,9 @@ docker run hello-world
 > docker login
 > docker tag python-helloworld ozhankaraman/python-helloworld
 > docker push ozhankaraman/python-helloworld
+# or for multi arch image build
+> docker login
+> docker buildx build --platform linux/amd64,linux/arm64,linux/arm/v7 -t ozhankaraman/python-helloworld  --push .
 ```
 
 4.2) Automatic Push to Docker Hub using build.sh
