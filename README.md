@@ -56,10 +56,16 @@ docker run hello-world
 > ./build.sh -v 2.3.3 -e
 ```
 
-5) Start Docker Container
+5.1) Start Docker Container
 ```
 docker run --name python-helloworld --rm -it -p 8080:8080 ozhankaraman/python-helloworld:latest
 docker run --name python-helloworld --rm -it -p 8080:8080 ozhankaraman/python-helloworld:3.2.21
+```
+
+5.2) Start Kubernetes Pod
+```
+kubectl run python-helloworld --image=ozhankaraman/python-helloworld:latest --port=8080 --restart=Never
+kubectl -n default expose pod python-helloworld --port=80 --target-port=8080
 ```
 
 6) Open a new terminal connection to server and test connection or you could test it over your browser

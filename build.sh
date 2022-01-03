@@ -33,8 +33,9 @@ fi
 
 echo "*** image: $image ***"
 
-docker build --build-arg BRANCH=${branch} --build-arg GITCOMMIT=${commit} --build-arg VERSION=${version} --build-arg TAG="${image}" --build-arg ERROR="${error}" -t ${image} -f Dockerfile .
-docker push ${image}
+#docker build --build-arg BRANCH=${branch} --build-arg GITCOMMIT=${commit} --build-arg VERSION=${version} --build-arg TAG="${image}" --build-arg ERROR="${error}" -t ${image} -f Dockerfile .
+#docker push ${image}
+docker buildx build --build-arg BRANCH=${branch} --build-arg GITCOMMIT=${commit} --build-arg VERSION=${version} --build-arg TAG="${image}" --build-arg ERROR="${error}" --platform linux/amd64,linux/arm64,linux/arm/v7 -t ${image} --push .
 
 #docker build -t python-helloworld --build-arg BRANCH=${branch} --build-arg GITCOMMIT=${commit} --build-arg VERSION=${version} .
 
